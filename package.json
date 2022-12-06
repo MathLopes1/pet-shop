@@ -1,0 +1,22 @@
+{
+  "name": "crud-petshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MathLopes1/pet-shop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MathLopes1/pet-shop/issues"
+  },
+  "homepage": "https://github.com/MathLopes1/pet-shop#readme",
+  "dependencies": {
+    "fetch": "^1.1.0"
+  }
+}

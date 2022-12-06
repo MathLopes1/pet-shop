@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1em;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background: #ffffff;
+}
+
+/* layout */
+
+#header-area {
+    background-color: #f7b600;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+#area-logo, #area-menu {
+    padding: 10px;
+    justify-content: space-between;
+}
+
+#main-area {
+    background: white;
+    width: 920px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+#post-area {
+    width: 660px;
+    float: left;
+}
+
+#side-area {
+    width: 240px;
+    float: right;
+}
+
+.post {
+    padding: 20px;
+    margin-bottom: 20px;
+    background: white;
+}
+
+.side-content {
+    background: white;
+    padding: 10px;
+    bottom: 20px;
+}
+
+.post-side {
+    font-size: 0.8em;
+    padding: 5px;
+    border-bottom: 1px dotted #ccc;
+}
+
+#baseboard {
+    clear: both;
+    text-align: center;
+    padding: 15px;
+    background: #ccc;
+}
+
+/* general formatting */
+
+h1 {
+    color: #4e4e4e;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #f7b600;
+}
+
+h3 {
+    color: #565656;
+    background: orange;
+    padding: 5px;
+}
+
+.span-white {
+    color: white;
+}
+
+.post-data {
+    font-size: 0.8em;
+    border-bottom: 1px solid #f4f4f4;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* menu formatting */
+
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #f7b600;
+}
+
+a:hover {
+    text-decoration: underline;
+
+}
+
+#header-area a:link, #header-area a:visited {
+    color: #fff;
+    padding: 8px 12px;
+}
+
+#header-area a:hover {
+    color: #f7b600;
+    background: #fff;
+    text-decoration: none;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+  }
+  
+  .botao {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30px;
+  }
+  
+  .botaodireira {
+    left: auto;
+    right: 30px;
+  }
+  
+  .slideshow {
+    /* z-index: -1; */
+    position: relative;
+  }

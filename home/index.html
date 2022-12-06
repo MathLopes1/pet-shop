@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PetShop</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+    <body>
+        <div id="header-area">
+           <div>                
+                <img  width="100px" src="../imgs/animation/projeto.gif" >       
+           </div>
+
+            <div style="display: flex;">
+                <img width="100px" src="../imgs/bitmap.png">
+                <div >
+                    <div id="area-logo">
+                        <h1>Betta<span class="span-white">Pet</span></h1>
+                    </div>
+                    <div id="area-menu">
+                        <a href="index.html">Home</a>
+                        <a href="../animais/index.html">Cadastro de Animais</a>
+                    </div>
+                </div>
+            </div>
+
+            <div></div>
+        </div>
+
+        <div id="main-area">
+            <div id="post-area">
+
+                <div class="post">
+
+                    <h2>Nossos Clientes</h2>
+                    <span class="post-data">Postado em 26 de abril de 2022</span> 
+                    <div class="slideshow">
+                        <img class="mySlides" src="../imgs/CACHORRO1.jpg">
+                        <img class="mySlides" src="../imgs/CACATUA.jpg">
+                        <img class="mySlides" src="../imgs/CACHORRO2.png">
+                      
+                        <button class="botaoesquerda botao" onclick="plusDivs(-1)">&#10094;</button>
+                        <button class="botaodireira botao" onclick="plusDivs(1)">&#10095;</button>
+                    </div>
+
+                    <p>
+                        It is a long established fact that a reader will be distracted by 
+                        the readable content of a page when looking at its layout. The point 
+                        of using Lorem Ipsum is that it has a more-or-less normal distribution 
+                        of letters,as opposed to using 'Content here, content here', making it 
+                        look like readable English.
+                    </p>
+                    <a href="">Leia mais</a>
+                </div>         
+            </div>
+    
+            <div id="side-area">
+                <div class="side-content">
+                    <div class="post-side">
+                        <audio controls autoplay>
+                            <source src="../audio/potter.mp3" type="audio/mp3">
+                            seu navegador não suporta HTML5
+                        </audio>
+                        <audio controls autoplay>
+                            <source src="../audio/bettapet_audio_final.mp3" type="audio/mp3">
+                            seu navegador não suporta HTML5
+                        </audio>
+                    </div>
+                    <hr>
+                </div>
+
+            </div>
+
+            <div id="post-area">
+                <div class="post">
+
+                    <h2>BOAS VINDAS</h2>
+                    <video width="620" controls autoplay>
+                        <source src="../video/battapet.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>         
+            </div>
+
+            <footer id="baseboard"> 
+                Todos os direitos reservados 
+            </footer>
+        </div>
+    </body>
+</html>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+    showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+
+        if (n > x.length) {
+            slideIndex = 1
+        }
+
+        if (n < 1) {
+            slideIndex = x.length
+        }
+
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+
+        x[slideIndex - 1].style.display = "block";
+    }
+</script>

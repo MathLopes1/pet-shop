@@ -8,8 +8,19 @@ const btnSalvar = document.querySelector('#btnSalvar')
 
 let itens
 let id
+let data
+let linkImgData
 
-function openModal(edit = false, index = 0) {
+  fetch('https://dog.ceo/api/breeds/image/random')
+  .then(response => {
+      return response.json();
+  })
+  .then(r => {
+      linkImgData = r;
+      console.log(linkImgData);
+  })  
+
+  function openModal(edit = false, index = 0) {
   modal.classList.add('active')
 
   modal.onclick = e => {
@@ -17,22 +28,23 @@ function openModal(edit = false, index = 0) {
       modal.classList.remove('active')
     }
   }
-
   if (edit) {
     sEspecie.value = itens[index].especie
     sRaca.value = itens[index].raca
     sNome.value = itens[index].nome
     sDono.value = itens[index].dono
     id = index
+
   } else {
     sEspecie.value = ''
-    sFuncao.value = ''
-    sSalario.value = ''
+    sRaca.value = ''
+    sNome.value = ''
+    sDono.value = ''
   }
-  
 }
 
 function editItem(index) {
+  console.log('aqui')
 
   openModal(true, index)
 }
@@ -91,11 +103,9 @@ function loadItens() {
   itens.forEach((item, index) => {
     insertItem(item, index)
   })
-
 }
 
 const getItensBD = () => JSON.parse(localStorage.getItem('dbfunc')) ?? []
 const setItensBD = () => localStorage.setItem('dbfunc', JSON.stringify(itens))
 
 loadItens()
-
